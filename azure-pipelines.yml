@@ -26,7 +26,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commands here.
+      
       $WRK_DIR="C:\GitRepo3D\DemoTest\001"
       $INS_DIR="C:\Program Files\WhereScape\WhereScape 3D"
       $EXE_DIR="C:\Program Files\WhereScape\RED"
