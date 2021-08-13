@@ -21,4 +21,4 @@ steps:
 - task: PowerShell@2
   inputs:
     targetType: filePath
-    filePath: 'C:\Temp\001\Deploy_3D_to_REDPowershellWorks.ps1'
+    filePath: '$(Build.SourcesDirectory)\C:\Temp\001\Deploy_3D_to_REDPowershellWorks.ps1'
