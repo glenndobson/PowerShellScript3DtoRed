@@ -6,8 +6,8 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: DESKTOP-DCAIAJ6
+#  vmImage: ubuntu-latest
 
 steps:
 #- task: PowerShell@2
