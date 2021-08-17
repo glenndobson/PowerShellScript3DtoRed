@@ -112,25 +112,7 @@ steps:
       }
       
       
-      $PS_STEP = 400 
-      $PS_Description = "Deploy the Wherescapre Red application"
-      TRY {
-          
-          $output = & "$RED_CLI" deployment deploy --xml-file-name $XML_FIL --meta-dsn $RED_MET --meta-dsn-arch $RED_ARC --red-user-name $RED_USR --ddl-file-name $DDL_FIL >> $LOG_FIL 2>&1
-          
-      	
-      	$RESULT_MSG = -join($RESULT_MSG,"Application $MOD_VER $MOD_NUM Released to $REPO_3D`n")
-          $RESULT_MSG = -join($RESULT_MSG,"$output`n")
-          #Reads Log File and addes to output
-          $output = Get-Content $AppLogFile -Raw
-          $RESULT_MSG = -join($RESULT_MSG,"$output`n")
-          $PS_STATUS = 1
-      }
       
-      CATCH {
-          $RESULT_MSG = -join($RESULT_MSG,"Step: $PS_STEP`n","Step Message: $PS_Description`n","Error! $output`n")
-          $PS_STATUS = -2
-      }
       
       Write-Output $PS_STATUS;  
       Write-Output $RESULT_MSG; 
