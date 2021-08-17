@@ -95,7 +95,7 @@ steps:
       TRY {
           #Start-Process "$JAVA_EX" -Xmx512m -XX:MaxMetaspaceSize=256m -splash: -jar "C:\Program Files\WhereScape\WhereScape 3D\WhereScape-3D-HEAD-bundle.jar" redexport -r $REPO_3D -c $CATG_3D -m $MOD_NAM -v $MOD_VER -o $XML_FIL > $LOG_FIL 2>&1
           
-          $output = & "$JAVA_EX" --illegal-access=debug -Xmx512m -XX:MaxMetaspaceSize=256m -splash: -jar $JAR_FIL redexport -r $REPO_3D -c $CATG_3D -m $MOD_NAM -v $MOD_VER -o $XML_FIL -f > $LOG_FIL 2>&1
+          $output = & "$JAVA_EX" --illegal-access=warn -Xmx512m -XX:MaxMetaspaceSize=256m -splash: -jar $JAR_FIL redexport -r $REPO_3D -c $CATG_3D -m $MOD_NAM -v $MOD_VER -o $XML_FIL -f > $LOG_FIL 2>&1
           $RESULT_MSG = -join($RESULT_MSG,"Application $MOD_VER $MOD_NUM created for $REPO_3D`n")
           $RESULT_MSG = -join($RESULT_MSG,"$output`n") 
           $output = Get-Content $AppLogFile -Raw 
