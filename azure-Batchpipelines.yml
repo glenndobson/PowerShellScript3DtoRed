@@ -17,5 +17,9 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
+- task: BatchScript@1
+  inputs:
+      filename: 'C:\Users\Glenn\Files\Wherescape\WhereScapeDevOpsSampleScripts\DevOps - Deploy from 3D to RED\Deploy_3D_to_REDv2.bat'
   
   
