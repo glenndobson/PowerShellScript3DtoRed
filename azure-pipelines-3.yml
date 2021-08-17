@@ -20,4 +20,4 @@ steps:
 
 - task: BatchScript@1
   inputs:
-    filename: 'C:\Deploy_3D_to_REDv2.bat'
+    filename: 'C:\Temp\RunPowershell.bat'
