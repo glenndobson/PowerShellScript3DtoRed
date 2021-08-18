@@ -138,7 +138,7 @@ steps:
       Write-Output $RESULT_MSG; 
       Write-Output $PS_Description;
                              
-                             if ($PS_STATUS = 1) 
+                             if ($PS_STATUS -eq 1) 
                              {
                                 $LASTEXITCODE = 0
                              }
