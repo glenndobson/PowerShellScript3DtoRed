@@ -143,4 +143,3 @@ steps:
                                 $LASTEXITCODE = 0
                              }
                              EXIT $LastExitCode
-    errorActionPreference: 'continue'
