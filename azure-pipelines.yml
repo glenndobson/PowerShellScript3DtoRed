@@ -26,8 +26,8 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser
-      Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine
+      Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser -ErrorAction SilentlyContinue
+      Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -ErrorAction SilentlyContinue
       $var = Get-ExecutionPolicy -List
       Set-Content C:\GitRepo3D\test.txt $var
       $WRK_DIR="C:\GitRepo3D\DemoTest\001"
