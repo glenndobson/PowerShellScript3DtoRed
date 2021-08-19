@@ -27,6 +27,7 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
+      Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -ErrorAction Ignore
       Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope CurrentUser -ErrorAction Ignore
       Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope LocalMachine -ErrorAction Ignore
       $var = Get-ExecutionPolicy -List
